@@ -1,0 +1,14 @@
+node_modules
+dist
+.output
+.nitro
+.vinxi
+.tanstack
+.vercel
+*.local
+.env
+.env.*
+!.env.example
+.data
+coverage
+.DS_Store

@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-50: oklch(0.97 0.014 285);
+  --color-brand-100: oklch(0.93 0.03 285);
+  --color-brand-500: oklch(0.58 0.2 285);
+  --color-brand-600: oklch(0.52 0.21 285);
+  --color-brand-700: oklch(0.45 0.19 285);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700;
+  }
+
+  .input {
+    @apply mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-[15px]
+      text-slate-900 shadow-sm transition placeholder:text-slate-400
+      focus:border-brand-500 focus:ring-4 focus:ring-brand-500/12 focus:outline-none
+      disabled:cursor-not-allowed disabled:bg-slate-100;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold
+      transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-700;
+  }
+
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  .btn-danger {
+    @apply border border-red-200 bg-white text-red-700 hover:bg-red-50;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+}
