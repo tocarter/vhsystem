@@ -35,7 +35,7 @@ function LandingPage() {
               V
             </span>
             <span className="text-lg font-bold tracking-tight text-slate-900">
-              Volunteer Hours
+              Volunteer Hours System
             </span>
           </div>
 

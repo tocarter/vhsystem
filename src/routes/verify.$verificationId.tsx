@@ -7,7 +7,7 @@ export const Route = createFileRoute('/verify/$verificationId')({
   loader: ({ params }) =>
     verifyCertificate({ data: { verificationId: params.verificationId } }),
   head: ({ params }) => ({
-    meta: [{ title: `Verify ${params.verificationId} · Volunteer Hours` }],
+    meta: [{ title: `Verify ${params.verificationId} · Volunteer Hours System` }],
   }),
   component: VerifyPage,
 })

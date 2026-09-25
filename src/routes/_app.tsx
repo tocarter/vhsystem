@@ -77,7 +77,7 @@ function AppLayout() {
               V
             </span>
             <span className="hidden text-sm font-bold tracking-tight text-slate-900 sm:block">
-              Volunteer Hours
+              Volunteer Hours System
             </span>
           </Link>
 

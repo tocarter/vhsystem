@@ -2,6 +2,7 @@ import crypto from 'node:crypto'
 import { readEnv } from '../env'
 import { createLocalDriver } from './local'
 import { createS3Driver } from './s3'
+import { createVercelBlobDriver } from './vercel-blob'
 
 export type StoredFile = {
   body: Buffer
@@ -23,7 +24,13 @@ export function setStorageDriverForTesting(driver: StorageDriver | undefined) {
 
 export function getStorage(): StorageDriver {
   if (cached) return cached
-  cached = readEnv('STORAGE_DRIVER') === 's3' ? createS3Driver() : createLocalDriver()
+  const driver = readEnv('STORAGE_DRIVER')
+  cached =
+    driver === 's3'
+      ? createS3Driver()
+      : driver === 'vercel-blob'
+        ? createVercelBlobDriver()
+        : createLocalDriver()
   return cached
 }
 

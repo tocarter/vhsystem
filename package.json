@@ -18,6 +18,7 @@
     "@tanstack/react-query": "^5.102.8",
     "@tanstack/react-router": "^1.170.32",
     "@tanstack/react-start": "^1.168.49",
+    "@vercel/blob": "^2.8.0",
     "drizzle-orm": "^0.45.2",
     "pdf-lib": "^1.17.1",
     "postgres": "^3.4.9",

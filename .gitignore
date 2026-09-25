@@ -12,3 +12,4 @@ dist
 .data
 coverage
 .DS_Store
+.env*

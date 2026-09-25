@@ -16,7 +16,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'color-scheme', content: 'light' },
-      { title: 'Volunteer Hours Portal' },
+      { title: 'Volunteer Hours System' },
       {
         name: 'description',
         content:
